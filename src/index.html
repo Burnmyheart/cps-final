@@ -17,13 +17,16 @@
       <header>
         <div class="header">
           <div class="header__left">
-            <a href="#">
-              <img
-                src="assets/burger-icon/burger.svg"
+              <button class="header__burger-button">
+            <img
+                src="assets/burger-icon/burgermain.svg"
                 alt="burger"
-                class="header__burger"
+                class="icon-burger"
               />
-            </a>
+
+              <img src="assets/burger-icon/burger.svg" alt="" class="icon-close" style="display:none;">
+              </button>
+
             <img
               src="assets/main-icon/divider.svg"
               alt="divider"
@@ -70,6 +73,124 @@
           </div>
         </div>
       </header>
+       <div class="burger__menu">
+        <div class="burger__menu--main">
+          <div class="burger__menu--top">
+            <div class="burger__menu--left">
+              <button class="icon-button icon-button-hiden">
+                <img src="assets/burger-icon/burger.svg" alt="" class="back" />
+              </button>
+              <img src="assets/burger-icon/Group.svg" alt="" class="back" />
+            </div>
+            <button class="icon-button">
+              <img src="assets/burger-icon/search.svg" alt="" class="back" />
+            </button>
+          </div>
+          <nav class="burger__menu--nav">
+            <ul class="burger__menu--list">
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon--active"
+                />
+                <a href="#" class="burger__menu--link--activ">Ремонт техники</a>
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link">Услуги и сервисы</a>
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link">
+                  Корпоративным клиентам</a
+                >
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link">Продавцам техники</a>
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link">Партнерам</a>
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link">Производителям</a>
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link">Наши сервисные центры</a>
+              </li>
+              <li class="burger__menu--item">
+                <img
+                  src="assets/burger-icon/highlight.svg"
+                  alt="highlight"
+                  class="burger__menu--icon"
+                />
+                <a href="#" class="burger__menu--link"> Контакты</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      <div class="burger__footer--main">
+        <div class="burger__footer">
+          <div class="burger__menu--contacts">
+            <div class="burger__menu--icons">
+              <div class="burger__menu__top--footer">
+                <button class="icon-button">
+                  <img src="assets/burger-icon/phone.svg" alt="" />
+                </button>
+                <button class="icon-button">
+                  <img src="assets/burger-icon/chat.svg" alt="" />
+                </button>
+                <button class="icon-button">
+                  <img src="assets/burger-icon/profile.svg" alt="" />
+                </button>
+              </div>
+              <a class="burger__menu--mail" href="mailto:mail@cpc.com"
+                >mail@cpc.com</a
+              >
+            </div>
+            <a class="burger__menu--phone" href="tel:+88008908900"
+              >8 800 890 8990</a
+            >
+          </div>
+          <div class="burger__menu--languages">
+            <button class="burger__menu--button burger__menu--button--active">
+              RU
+            </button>
+            <button class="burger__menu--button">EN</button>
+            <button class="burger__menu--button">CH</button>
+          </div>
+        </div>
+      </div>
+    </div>
+            
       <main>
         <div class="content">
           <div class="content__header">
@@ -136,7 +257,7 @@
             />
           </div>
         </div>
-      </main>
+      
       <div>
            
         <div class="main__main">
@@ -560,6 +681,7 @@
       </div>
       
     </div>
+    </main>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
   </body>

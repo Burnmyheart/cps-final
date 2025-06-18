@@ -29,12 +29,6 @@ body {
   gap: 16px;
 }
 
-@media (max-width: 768px) {
-  .container {
-    // padding: 0 8px;
-  }
-}
-
 .header {
   &__left,
   &__right {
@@ -231,13 +225,10 @@ body {
 }
 
 @media (min-width: 1120px) {
-  .header {
+  .icon-button-hiden {
     display: none;
   }
-
   .content {
-    margin-top: 42px;
-
     &__header {
       display: flex;
       align-items: center;
