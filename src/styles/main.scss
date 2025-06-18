@@ -1,0 +1,20 @@
+@use "sass:math";
+@use "normalize.css" as *;
+@use "./_fonts" as *;
+@use "../components/main/main.scss" as *;
+@use "../components/brands/brands.scss" as *;
+
+// Global styles
+body {
+  font-family: "TT Lakes", Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+}
+
+.container {
+  max-width: 100%;
+  margin: 0 ;
+  // padding: 0 1rem;
+}
