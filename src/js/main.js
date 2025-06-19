@@ -5,6 +5,7 @@ import "../components/sliderService/serviseSlider.scss";
 import "../components/price/price.scss";
 import "../styles/main.scss";
 import "../components/burger/burgerMobile.scss";
+import "../components/price/priceGrid.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
@@ -36,10 +37,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const iconBurger = burgerBtn.querySelector(".icon-burger");
     const iconClose = burgerBtn.querySelector(".icon-close");
     const backButton = document.querySelector(".icon-button");
+    const overlay = document.querySelector(".overlay");
 
 
     const openMenu = () => {
       burgerMenu.classList.add("active");
+      overlay.classList.add("active");
       iconBurger.style.display = "none";
       iconClose.style.display = "inline";
 
@@ -47,6 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const closeMenu = () => {
       burgerMenu.classList.remove("active");
+      overlay.classList.remove("active");
       iconBurger.style.display = "inline";
       iconClose.style.display = "none";
 

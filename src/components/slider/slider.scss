@@ -241,3 +241,12 @@ body {
     display: none;
   }
 }
+
+@media (min-width: 1440px) {
+  .brand__hiden:nth-child(7) {
+    display: block;
+  }
+  .brand__hiden:nth-child(8) {
+    display: flex;
+  }
+}

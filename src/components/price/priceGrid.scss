@@ -1,0 +1,68 @@
+.price-table {
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .price-table {
+    display: block;
+  }
+
+  .price-grid--table {
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #fff;
+  }
+  .price-table__head,
+  .price-table__row {
+    display: grid;
+    grid-template-columns: minmax(160px, 1fr) 90px 90px 120px;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .price-table__row {
+    background-color: #fff !important;
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .price-table__head {
+    font-weight: 600;
+    color: #999;
+  }
+
+  .price-table__button {
+    justify-self: end;
+  }
+}
+
+@media (min-width: 1120px) {
+  .price-table {
+    display: block;
+  }
+  .price-grid--table {
+    padding-left: 32px;
+    padding-right: 32px;
+    background-color: #fff;
+  }
+  .price-table__head,
+  .price-table__row {
+    display: grid;
+    grid-template-columns: minmax(200px, 1fr) 1fr 1fr 140px;
+    gap: 16px;
+    padding: 20px;
+  }
+
+  .price-table__row {
+    border-bottom: 1px solid #eaeaea;
+  }
+
+  .price-table__head {
+    font-weight: 600;
+    color: #999;
+    background: #f8f8f8;
+  }
+
+  .price-table__button {
+    justify-self: end;
+  }
+}
