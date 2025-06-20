@@ -9,7 +9,7 @@ import "../components/price/priceGrid.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
-    // Инициализация слайдеров Swiper
+
     const brandsSlider = new Swiper(".brands__slider", {
       slidesPerView: "auto",
       spaceBetween: 16,
