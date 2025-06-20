@@ -6,6 +6,9 @@ import "../components/price/price.scss";
 import "../styles/main.scss";
 import "../components/burger/burgerMobile.scss";
 import "../components/price/priceGrid.scss";
+import "../components/information/information.scss"
+import "../components/footer/footer.scss"
+
 
 document.addEventListener("DOMContentLoaded", () => {
   try {

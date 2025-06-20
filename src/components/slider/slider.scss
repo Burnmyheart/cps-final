@@ -127,17 +127,6 @@ body {
   }
 }
 
-.brand__hiden {
-  display: none;
-
-  @media (min-width: 1120px) {
-    &:nth-child(7),
-    &:nth-child(8) {
-      display: flex;
-    }
-  }
-}
-
 .toggle-btn {
   display: none;
   margin-top: 16px;
@@ -155,7 +144,6 @@ body {
   @media (min-width: 768px) {
     display: flex;
     margin: 0;
-    padding-left: 25px;
   }
 
   &__text {
@@ -172,16 +160,6 @@ body {
   position: relative !important;
   text-align: center;
   margin-top: 16px;
-
-  &-bullet {
-    width: 12px !important;
-    height: 12px !important;
-    background-color: #dddddd !important;
-
-    &-active {
-      background-color: #b5b6bc !important;
-    }
-  }
 }
 
 .slider {
@@ -244,9 +222,9 @@ body {
 
 @media (min-width: 1440px) {
   .brand__hiden:nth-child(7) {
-    display: block;
+    display: grid;
   }
   .brand__hiden:nth-child(8) {
-    display: flex;
+    display: grid;
   }
 }

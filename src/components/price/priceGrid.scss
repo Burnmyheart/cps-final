@@ -5,12 +5,13 @@
 @media (min-width: 768px) and (max-width: 1119px) {
   .price-table {
     display: block;
+    margin-left: 32px;
+    margin-right: 32px;
   }
 
   .price-grid--table {
-    padding-left: 32px;
-    padding-right: 32px;
     background-color: #fff;
+    border: 1px solid #fff;
   }
   .price-table__head,
   .price-table__row {
@@ -38,10 +39,13 @@
 @media (min-width: 1120px) {
   .price-table {
     display: block;
+
+    margin-left: 32px;
+    margin-right: 32px;
   }
   .price-grid--table {
-    padding-left: 32px;
-    padding-right: 32px;
+    border: 1px solid #fff;
+
     background-color: #fff;
   }
   .price-table__head,

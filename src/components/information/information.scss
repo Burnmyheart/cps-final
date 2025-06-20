@@ -1,0 +1,55 @@
+.information {
+  display: flex;
+  flex-direction: column;
+  width: 288px;
+  padding-left: 16px;
+  gap: 16px;
+}
+
+.information__text {
+  font-family: TT Lakes;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.2px;
+  margin: 0;
+}
+
+.information__button {
+  display: inline;
+  text-align: center;
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+img {
+  vertical-align: baseline;
+}
+
+.information__button img {
+  vertical-align: text-bottom;
+}
+@media (min-width: 768px) and (max-width: 1119px) {
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 421px;
+    padding-left: 24px;
+    gap: 16px;
+  }
+}
+
+@media (min-width: 1120px) {
+  .information {
+    display: flex;
+    flex-direction: column;
+    width: 421px;
+    padding-left: 32px;
+    gap: 16px;
+  }
+}

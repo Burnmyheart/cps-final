@@ -1,4 +1,3 @@
-
 $bg-light: #f8f8f8;
 $bg-white: #fff;
 $border-color: rgba(234, 234, 234, 1);
@@ -64,7 +63,7 @@ body {
 .brands__header {
   background: linear-gradient(90deg, $bg-light 0%, #ffffff 98.61%);
   padding: 16px;
-  border-top: 1px solid #D9FFF5;
+  border-top: 1px solid #d9fff5;
 }
 
 .brands__fade {
@@ -158,7 +157,6 @@ body {
   }
 
   @media (min-width: 1200px) {
-    padding: 0 24px;
     max-width: 100%;
   }
 }
@@ -166,7 +164,7 @@ body {
 .brand__hiden {
   display: none;
 
-  @media (min-width: 1120px) and (max-width: 1199px) {
+  @media (min-width: 1376px) {
     &:nth-child(7),
     &:nth-child(8) {
       display: flex;
