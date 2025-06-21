@@ -172,11 +172,6 @@ button {
 
 @media (min-width: 1120px) {
   .burger__menu {
-    width: 360px;
-  }
-}
-@media (min-width: 1120px) {
-  .burger__menu {
     transform: none;
     opacity: 1;
     pointer-events: auto;

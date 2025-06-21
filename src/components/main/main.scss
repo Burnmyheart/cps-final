@@ -176,8 +176,8 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
+  background: rgba(255, 255, 255, 0.9);
   z-index: 900;
   opacity: 0;
   pointer-events: none;
@@ -188,6 +188,7 @@ body {
   opacity: 1;
   pointer-events: auto;
 }
+
 @media (min-width: 768px) {
   .overlay {
     position: fixed;
@@ -196,7 +197,7 @@ body {
     width: 100%;
     height: 100vh;
     background-color: rgba(255, 255, 255, 0.9);
-    z-index: 900;
+    z-index: 950;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease;
@@ -258,6 +259,24 @@ body {
 }
 
 @media (min-width: 1120px) {
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 950;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
   .icon-button-hiden {
     display: none;
   }

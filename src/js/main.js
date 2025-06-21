@@ -6,13 +6,12 @@ import "../components/price/price.scss";
 import "../styles/main.scss";
 import "../components/burger/burgerMobile.scss";
 import "../components/price/priceGrid.scss";
-import "../components/information/information.scss"
-import "../components/footer/footer.scss"
-
+import "../components/information/information.scss";
+import "../components/footer/footer.scss";
+import "../components/call/call.scss";
 
 document.addEventListener("DOMContentLoaded", () => {
   try {
-
     const brandsSlider = new Swiper(".brands__slider", {
       slidesPerView: "auto",
       spaceBetween: 16,
@@ -37,26 +36,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const burgerBtn = document.querySelector(".header__burger-button");
     const burgerMenu = document.querySelector(".burger__menu");
-    const iconBurger = burgerBtn.querySelector(".icon-burger");
-    const iconClose = burgerBtn.querySelector(".icon-close");
     const backButton = document.querySelector(".icon-button");
     const overlay = document.querySelector(".overlay");
-
 
     const openMenu = () => {
       burgerMenu.classList.add("active");
       overlay.classList.add("active");
-      iconBurger.style.display = "none";
-      iconClose.style.display = "inline";
-
     };
 
     const closeMenu = () => {
       burgerMenu.classList.remove("active");
       overlay.classList.remove("active");
-      iconBurger.style.display = "inline";
-      iconClose.style.display = "none";
-
     };
 
     burgerBtn.addEventListener("click", (e) => {
@@ -68,14 +58,47 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
 
-
-
     if (backButton) {
       backButton.addEventListener("click", (e) => {
         e.preventDefault();
         closeMenu();
       });
     }
+
+    const callbackMenu = document.querySelector(".callback__menu");
+    const callbackOpenBtns = document.querySelectorAll(".open-modal-btn");
+    const callbackCloseBtn = document.querySelector(".callback__menu--close");
+    const callbackOverlay = document.querySelector(".callback-overlay");
+
+    const openCallbackMenu = () => {
+      callbackMenu.classList.add("active");
+      callbackOverlay.classList.add("active");
+      document.body.style.overflow = "hidden";
+    };
+
+    const closeCallbackMenu = () => {
+      callbackMenu.classList.remove("active");
+      callbackOverlay.classList.remove("active");
+      document.body.style.overflow = "";
+    };
+
+    callbackOpenBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openCallbackMenu();
+      });
+    });
+
+    callbackCloseBtn.addEventListener("click", (e) => {
+      e.preventDefault();
+      closeCallbackMenu();
+    });
+
+    callbackOverlay.addEventListener("click", (e) => {
+      if (e.target === callbackOverlay) {
+        closeCallbackMenu();
+      }
+    });
 
     document
       .querySelectorAll(".brands-section, .services-section")
