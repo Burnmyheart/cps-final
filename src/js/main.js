@@ -65,33 +65,51 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
 
-    const callbackMenu = document.querySelector(".callback__menu");
-    const callbackOpenBtns = document.querySelectorAll(".open-modal-btn");
-    const callbackCloseBtn = document.querySelector(".callback__menu--close");
+    const callbackMenuCall = document.querySelector(".callback__menu--call");
+    const callbackMenuChat = document.querySelector(".callback__menu--chat");
+    const callbackOpenBtnsCall = document.querySelectorAll(
+      ".open-modal-btn--call"
+    );
+    const callbackOpenBtnsChat = document.querySelectorAll(
+      ".open-modal-btn--chat"
+    );
+    const callbackCloseBtns = document.querySelectorAll(
+      ".callback__menu--close"
+    );
     const callbackOverlay = document.querySelector(".callback-overlay");
 
-    const openCallbackMenu = () => {
-      callbackMenu.classList.add("active");
+    const openCallbackMenu = (menu) => {
+      menu.classList.add("active");
       callbackOverlay.classList.add("active");
       document.body.style.overflow = "hidden";
     };
 
     const closeCallbackMenu = () => {
-      callbackMenu.classList.remove("active");
+      callbackMenuCall.classList.remove("active");
+      callbackMenuChat.classList.remove("active");
       callbackOverlay.classList.remove("active");
       document.body.style.overflow = "";
     };
 
-    callbackOpenBtns.forEach((btn) => {
+    callbackOpenBtnsCall.forEach((btn) => {
       btn.addEventListener("click", (e) => {
         e.preventDefault();
-        openCallbackMenu();
+        openCallbackMenu(callbackMenuCall);
       });
     });
 
-    callbackCloseBtn.addEventListener("click", (e) => {
-      e.preventDefault();
-      closeCallbackMenu();
+    callbackOpenBtnsChat.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        openCallbackMenu(callbackMenuChat);
+      });
+    });
+
+    callbackCloseBtns.forEach((btn) => {
+      btn.addEventListener("click", (e) => {
+        e.preventDefault();
+        closeCallbackMenu();
+      });
     });
 
     callbackOverlay.addEventListener("click", (e) => {

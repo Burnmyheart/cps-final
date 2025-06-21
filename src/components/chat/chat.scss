@@ -88,30 +88,9 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1120px) {
   .callback__menu--close {
     display: none;
-  }
-
-  .callback__menu--close-desktop {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: #ff3e79;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-    border: none;
-    cursor: pointer;
-    z-index: 10;
-    top: 24px;
-    right: 100%;
-    margin-right: 24px;
-  }
-
-  .callback__menu--close-desktop img {
-    filter: brightness(0) invert(1);
   }
 }
 
