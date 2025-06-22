@@ -112,11 +112,11 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    callbackOverlay.addEventListener("click", (e) => {
-      if (e.target === callbackOverlay) {
-        closeCallbackMenu();
-      }
-    });
+    // callbackOverlay.addEventListener("click", (e) => {
+    //   if (e.target === callbackOverlay) {
+    //     closeCallbackMenu();
+    //   }
+    // });
 
     document
       .querySelectorAll(".brands-section, .services-section")
