@@ -23,6 +23,26 @@ document.addEventListener("DOMContentLoaded", () => {
       },
     });
 
+
+    const toggleBtn = document.querySelector(".toggle-text");
+    const paragraph = document.querySelector(".content__paragraph--secondary");
+    const label = toggleBtn.querySelector(".toggle-text__label");
+    const arrowImg = toggleBtn.querySelector("img");
+
+    if (!toggleBtn || !paragraph) return;
+
+    toggleBtn.addEventListener("click", () => {
+      const isExpanded = paragraph.classList.toggle("expanded");
+
+      label.textContent = isExpanded ? "Скрыть" : "Читать далее";
+      toggleBtn.setAttribute("aria-expanded", String(isExpanded));
+      if (arrowImg) {
+        arrowImg.style.transition = "transform 0.3s ease";
+        arrowImg.style.transform = isExpanded ? "rotate(180deg)" : "rotate(0deg)";
+      }
+    });
+
+
     const servicesSlider = new Swiper(".services__slider", {
       slidesPerView: "auto",
       spaceBetween: 16,
@@ -137,6 +157,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 : "Показать все";
             }
             if (arrowImg) {
+              arrowImg.style.transition = "transform 0.3s ease";
               arrowImg.style.transform = grid.classList.contains("expanded")
                 ? "rotate(180deg)"
                 : "rotate(0deg)";

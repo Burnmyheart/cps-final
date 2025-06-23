@@ -8,7 +8,6 @@ body {
 .container {
   max-width: 100%;
   margin: 0 auto;
-  // padding: 0 16px;
 }
 
 .header {
@@ -189,6 +188,18 @@ body {
   pointer-events: auto;
 }
 
+.content__paragraph--secondary {
+  display: none;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  &.expanded {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
+  }
+}
+
 @media (min-width: 768px) {
   .overlay {
     position: fixed;
@@ -316,5 +327,11 @@ body {
 
   .menu__nav {
     flex-wrap: wrap;
+  }
+
+  .content__paragraph--secondary {
+    display: block;
+    -webkit-line-clamp: unset;
+    overflow: visible;
   }
 }
