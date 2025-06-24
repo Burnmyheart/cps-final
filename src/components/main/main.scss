@@ -47,7 +47,6 @@ body {
 .content {
   display: flex;
   flex-direction: column;
-  //   height: 100vh;
   gap: 24px;
   background-color: #f8f8f8;
 
@@ -236,6 +235,7 @@ body {
   }
 
   .content {
+    padding: 24px 24px 32px 0;
     &__title {
       font-size: 28px;
       font-weight: 700;

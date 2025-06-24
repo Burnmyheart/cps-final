@@ -15,12 +15,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const brandsSlider = new Swiper(".brands__slider", {
       slidesPerView: "auto",
       spaceBetween: 16,
-      slidesOffsetBefore: 16,
-      slidesOffsetAfter: 16,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
       },
+
     });
 
 
