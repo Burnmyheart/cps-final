@@ -15,6 +15,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const brandsSlider = new Swiper(".brands__slider", {
       slidesPerView: "auto",
       spaceBetween: 16,
+      slidesOffsetBefore: 16,
+      slidesOffsetAfter: 16,
       pagination: {
         el: ".swiper-pagination",
         clickable: true,
@@ -22,6 +24,27 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    const servicesSlider = new Swiper(".services__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      slidesOffsetBefore: 16,
+      slidesOffsetAfter: 16,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+
+    const priceSlider = new Swiper(".price__slider", {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      slidesOffsetBefore: 8,
+      slidesOffsetAfter: 8,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
 
     const toggleBtn = document.querySelector(".toggle-text");
     const paragraph = document.querySelector(".content__paragraph--secondary");
@@ -42,16 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
-    const servicesSlider = new Swiper(".services__slider", {
-      slidesPerView: "auto",
-      spaceBetween: 16,
-      slidesOffsetBefore: 16,
-      slidesOffsetAfter: 16,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
+
 
     const burgerBtn = document.querySelector(".header__burger-button");
     const burgerMenu = document.querySelector(".burger__menu");
@@ -131,20 +145,31 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
 
-    // callbackOverlay.addEventListener("click", (e) => {
-    //   if (e.target === callbackOverlay) {
-    //     closeCallbackMenu();
-    //   }
-    // });
+    callbackOverlay.addEventListener("click", (e) => {
+      if (e.target === callbackOverlay) {
+        closeCallbackMenu();
+      }
+    });
 
+    const burgerOverlay = document.querySelector(".overlay");
+
+    if (burgerOverlay) {
+      burgerOverlay.addEventListener("click", (e) => {
+        if (e.target === burgerOverlay) {
+          closeMenu();
+        }
+      });
+    }
     document
-      .querySelectorAll(".brands-section, .services-section")
+      .querySelectorAll(".brands-section, .services__section")
       .forEach((section) => {
         const toggleButton = section.querySelector(".toggle-btn");
+        console.log("toggleButton in section:", toggleButton);
         const grid = section.querySelector(".brands-grid, .services-grid");
 
         if (toggleButton && grid) {
           toggleButton.addEventListener("click", () => {
+            console.log("Кнопка раскрытия нажата");
             grid.classList.toggle("expanded");
 
             const buttonText = toggleButton.querySelector(".toggle-btn__text");
@@ -163,6 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
           });
         }
+
       });
   } catch (error) {
     console.error("Error initializing components:", error);

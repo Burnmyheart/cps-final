@@ -17,6 +17,10 @@
   pointer-events: none;
 }
 
+.highlight__call {
+  height: 40px;
+  width: 3px;
+}
 .callback__menu--left {
   display: flex;
   flex-direction: row;
@@ -40,6 +44,10 @@
 }
 .callback__menu--title {
   margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 32px;
+  font-family: "TT Lakes", sans-serif;
 }
 .callback__menu--notice {
   margin: 0;
@@ -48,7 +56,7 @@
 .callback__menu--flex {
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 32px;
 }
 .callback__menu.active {
   transform: translateX(0);
