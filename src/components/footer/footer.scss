@@ -1,49 +1,50 @@
 .footer {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  margin: 0;
-  gap: 16px;
-  padding-bottom: 19px;
-  padding-top: 16px;
+  flex-shrink: 0;
   border-top: 1px solid #d9fff5;
-  color: #7e7e82;
+  padding: 16px 4px 19px 4px;
 }
 
-.footer__text {
+.foofter__text {
+  color: #7e7e82;
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.text__year,
+.text__company,
+.text__privacy,
+.text__info {
+  text-align: center;
+  letter-spacing: 0.2px;
   margin: 0;
+  text-decoration: none;
 }
 
 @media (min-width: 768px) {
   .footer {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+    padding: 32px 24px 25px 24px;
   }
 
-  .footer__item {
-    flex-basis: 33%;
+  .foofter__text {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    align-items: start;
+  }
+
+  .text__info {
+    text-align: end;
+  }
+
+  .text__privacy {
     text-align: center;
   }
 
-  .footer__left {
-    text-align: left;
-    font-size: 13px;
-    padding-left: 24px;
-    padding-right: 35px;
-  }
-
-  .footer__center {
-    text-align: center;
-    font-size: 14px;
-  }
-
-  .footer__right {
-    text-align: right;
-    font-size: 13px;
-    padding-right: 24px;
-    padding-left: 40px;
-    width: 330px;
+  .text__year,
+  .text__company {
+    text-align: start;
   }
 }
