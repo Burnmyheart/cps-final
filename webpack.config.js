@@ -17,7 +17,7 @@ module.exports = {
     filename: `js/${filename("js")}`,
     path: path.resolve(__dirname, "dist"),
     clean: true,
-    publicPath: isDev ? "/" : "./",
+    publicPath: isDev ? "/" : "/cps-final/",
   },
   devtool: isProd ? false : "source-map",
   devServer: {

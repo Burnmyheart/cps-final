@@ -178,12 +178,12 @@ button {
     position: static;
     height: auto;
     box-shadow: none;
-    width: 360px;
+    width: 320px;
   }
 
   main {
-    margin-left: 360px;
-    width: calc(100vw - 360px);
+    margin-left: 320px;
+    width: calc(100vw - 320px);
   }
 
   .burger__menu {
@@ -195,5 +195,17 @@ button {
   }
   .overlay {
     display: none;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 767px) {
+  .burger__menu {
+    width: calc(320px + (40 * ((100vw - 320px) / 448)));
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1119px) {
+  .burger__menu {
+    width: 360px;
   }
 }

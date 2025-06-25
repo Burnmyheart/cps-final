@@ -124,7 +124,6 @@ body {
 }
 
 .content__image img {
-  // width: 100%;
   display: block;
 }
 
@@ -227,12 +226,13 @@ body {
   }
 
   .content__text {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 24px;
   }
 
   .content__image {
     width: 50%;
+    height: 100%;
     border-radius: 6px;
   }
 }
@@ -251,6 +251,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding-bottom: 0;
+    padding-right: 30px;
   }
 
   .content__title--text {

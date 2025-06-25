@@ -2,6 +2,7 @@
   flex-shrink: 0;
   border-top: 1px solid #d9fff5;
   padding: 16px 4px 19px 4px;
+  letter-spacing: 0px;
 }
 
 .foofter__text {
@@ -11,6 +12,7 @@
   flex-direction: column;
   gap: 16px;
   align-items: center;
+  letter-spacing: 0px;
 }
 
 .text__year,
@@ -18,7 +20,7 @@
 .text__privacy,
 .text__info {
   text-align: center;
-  letter-spacing: 0.2px;
+  letter-spacing: 0px;
   margin: 0;
   text-decoration: none;
 }
@@ -31,7 +33,7 @@
   .foofter__text {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 35px;
+    gap: 15px;
     align-items: start;
   }
 
