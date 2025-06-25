@@ -19,17 +19,27 @@
   .price-table__head,
   .price-table__row {
     display: grid;
-    grid-template-columns: minmax(190px, 1fr) 80px 80px 120px;
+    grid-template-columns: minmax(220px, 1fr) 100px 100px 120px;
     gap: 16px;
-    padding: 16px;
+    padding: 23px 16px 23px 16px;
     align-items: center;
   }
 
   .price-table__row {
     background-color: #fff !important;
-    border-bottom: 1px solid #eaeaea;
+    position: relative;
   }
 
+  .price-table__row:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    height: 1px;
+    background-color: #eaeaea;
+    z-index: 1;
+  }
   .price-table__head {
     font-weight: 600;
     color: #999;
@@ -64,9 +74,18 @@
   }
 
   .price-table__row {
-    border-bottom: 1px solid #eaeaea;
+    position: relative;
   }
-
+  .price-table__row:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    bottom: 0;
+    height: 1px;
+    background-color: #eaeaea;
+    z-index: 1;
+  }
   .price-table__head {
     font-weight: 600;
     color: #999;
