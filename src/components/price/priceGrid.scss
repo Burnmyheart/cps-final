@@ -21,9 +21,10 @@
     display: grid;
     grid-template-columns: minmax(220px, 1fr) 100px 100px 120px;
     gap: 16px;
-    padding: 23px 16px 23px 16px;
+    padding: 16px;
     align-items: center;
     font-size: 14px;
+    color: #1b1c21;
   }
 
   .price-table__row {
@@ -70,7 +71,7 @@
     display: grid;
     grid-template-columns: minmax(250px, 1fr) 120px 120px 140px;
     gap: 24px;
-    padding: 20px;
+    padding: 16px 24px;
     align-items: center;
     font-size: 14px;
   }
