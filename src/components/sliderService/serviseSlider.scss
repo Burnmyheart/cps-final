@@ -118,3 +118,13 @@
     display: flex;
   }
 }
+
+@media (min-width: 1120px) and (max-width: 1350px) {
+  .services__hiden {
+    display: none;
+  }
+
+  .services-grid.expanded .services__hiden {
+    display: flex;
+  }
+}
