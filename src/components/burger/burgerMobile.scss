@@ -15,7 +15,8 @@ button {
   position: fixed;
   top: 0;
   left: 0;
-  width: 320px;
+  width: 100%;
+  max-width: 360px;
   height: 100vh;
   background: white;
   z-index: 1000;
@@ -206,11 +207,11 @@ button {
   }
 }
 
-@media (min-width: 321px) and (max-width: 767px) {
-  .burger__menu {
-    width: calc(320px + (40 * ((100vw - 320px) / 448)));
-  }
-}
+// @media (min-width: 321px) and (max-width: 767px) {
+//   .burger__menu {
+//     width: calc(320px + (40 * ((100vw - 320px) / 448)));
+//   }
+// }
 
 @media (min-width: 768px) and (max-width: 1119px) {
   .burger__menu {
